@@ -1,0 +1,42 @@
+{
+    "axis": {
+        "Security Level": {
+            "attributes": [
+                {
+                    "name": "Protected",
+                    "isHybridized": false
+                },
+                {
+                    "name": "Confidential",
+                    "isHybridized": false
+                },
+                {
+                    "name": "Top Secret",
+                    "isHybridized": true
+                }
+            ],
+            "hierarchical": true
+        },
+        "Department": {
+            "attributes": [
+                {
+                    "name": "R&D",
+                    "isHybridized": false
+                },
+                {
+                    "name": "HR",
+                    "isHybridized": false
+                },
+                {
+                    "name": "MKG",
+                    "isHybridized": false
+                },
+                {
+                    "name": "FIN",
+                    "isHybridized": false
+                }
+            ],
+            "hierarchical": false
+        }
+    }
+}
