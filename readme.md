@@ -1,5 +1,5 @@
 # IRIS Cloudproof Encryption
-# This project implements the data Encryption in IRIS by cloudproof_py from Cosmian.
+# This project implements the data Encryption in IRIS by cloudproof_py from [Cosmian](https://docs.cosmian.com/cloudproof_encryption/how_it_works/).
 
 ## Instalation
 ```shell
@@ -9,7 +9,7 @@ cp src/python/cosmian /durable/iris/mgr/python
 ## Application Level Encryption in Interoperability
 Apply the following adapters in the business processes
 - `Cosmian.Cloudproof.CoverCryptAdapter` : encrypt locally
-- `Cosmian.Cloudproof.KmsAdapter` : encrypt from a remote KMS server
+- `Cosmian.Cloudproof.KmsAdapter` : encrypt from a remote cosmian [KMS server](https://docs.cosmian.com/cosmian_key_management_system/)
 
 ## Configuration
 ### Open IRIS terminal
@@ -54,3 +54,5 @@ d ##class("Cosmian.Cloudproof.Utils").FindexUpsert(masterKey, label, findexInter
 # search index by keywords
 w ##class("Cosmian.Cloudproof.Utils").FindexSearch(masterKey, label, findexInterface, "keywords")
 ```
+### Docs:
+https://docs.cosmian.com/cloudproof_encryption/how_it_works/
