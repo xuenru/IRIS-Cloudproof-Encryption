@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="iris-cloudproof-encryption.ZPM">
+    <Module>
+      <Name>iris-cloudproof-encryption</Name>
+      <Version>1.0.1</Version>
+      <Description>Utils for data Encryption in IRIS by Cloudproof from Cosmian</Description>
+      <Packaging>module</Packaging>
+      <Resource Name="Cosmian.PKG"/>
+      <SourcesRoot>src</SourcesRoot>
+      <FileCopy Name="src/python/cosmian/" Target="${mgrdir}python/"/>
+    </Module>
+  </Document>
+</Export>
