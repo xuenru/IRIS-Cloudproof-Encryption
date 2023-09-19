@@ -42,6 +42,9 @@ d ##class("Cosmian.Cloudproof.Utils").GenerateDecryptionKey(masterPrivateKey, po
 # Generate findex master key
 s masterKey = ##class("Cosmian.Cloudproof.Utils").FindexGenerateMasterKey("key path name")
 
+# Get existing findex master key
+s masterKey = ##class("Cosmian.Cloudproof.Utils").FindexGetMasterKey("/durable/NS/DEMO/findex_master.key")
+
 # Generate findex label for salt
 s label = ##class("Cosmian.Cloudproof.Utils").FindexGenerateLabel("label")
 
@@ -49,10 +52,12 @@ s label = ##class("Cosmian.Cloudproof.Utils").FindexGenerateLabel("label")
 s findexInterface = ##class("Cosmian.Cloudproof.Utils").FindexGetInterface("path to db sqlite")
 
 # Update or insert keywords index value in Findex database
-d ##class("Cosmian.Cloudproof.Utils").FindexUpsert(masterKey, label, findexInterface, "data")
+# data example : Set data = {"1": ["Martin", "Shepherd"], "2": ["Martial", "Wilkins"], "3": ["John", "Shepherd"]}.%ToJSON()
+d ##class("Cosmian.Cloudproof.Utils").FindexUpsert(masterKey, label, findexInterface, data)
 
 # search index by keywords
-w ##class("Cosmian.Cloudproof.Utils").FindexSearch(masterKey, label, findexInterface, "keywords")
+# keywords example : set keywords = ["She","Shepherd","John"].%ToJSON()
+w ##class("Cosmian.Cloudproof.Utils").FindexSearch(masterKey, label, findexInterface, keywords)
 ```
 ### Docs:
 https://docs.cosmian.com/cloudproof_encryption/how_it_works/

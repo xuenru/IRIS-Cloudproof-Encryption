@@ -236,13 +236,14 @@ ClassMethod FindexGetInterface(dbPath As %String) [ Language = python ]
 /// Update or insert data
 /// We can index the patient's ID and names
 /// example:
-/// data = {
+/// dataJson = {
 /// "1": ["Martin", "Shepherd"],
 /// "2": ["Martial", "Wilkins"],
 /// "3": ["John", "Shepherd"],
 /// }
-ClassMethod FindexUpsert(masterKey, label, findexInterface, data) [ Language = python ]
+ClassMethod FindexUpsert(masterKey, label, findexInterface, dataJson) [ Language = python ]
 {
+    data = json.loads(dataJson)
     # Create the index
     indexed_values_and_keywords: IndexedValuesAndKeywords = {}
     for uid, keywords in data.items():
@@ -260,6 +261,7 @@ ClassMethod FindexUpsert(masterKey, label, findexInterface, data) [ Language = p
 /// keywords to search example : keywords = ["She", "Shepherd", "John"]
 ClassMethod FindexSearch(masterKey, label, findexInterface, keywords) [ Language = python ]
 {
+    keywords = json.loads(keywords)
     found_locations = findexInterface.search(masterKey, label, keywords)
 
     print("Locations found by keywords:")
