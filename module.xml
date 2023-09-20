@@ -3,7 +3,7 @@
   <Document name="iris-cloudproof-encryption.ZPM">
     <Module>
       <Name>iris-cloudproof-encryption</Name>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Description>Utils for data Encryption in IRIS by Cloudproof from Cosmian</Description>
       <Packaging>module</Packaging>
       <Resource Name="Cosmian.PKG"/>
