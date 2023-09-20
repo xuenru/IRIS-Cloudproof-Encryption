@@ -7,8 +7,9 @@ $ git clone https://github.com/xuenru/IRIS-Cloudproof-Encryption.git
 $ cd IRIS-Cloudproof-Encryption
 $ pip install -r requirements.txt
 $ cp src/python/cosmian/ ${mgrdir}python/cosmian/
-# then import and compile classes in src/Cosmian/Cloudproof
 ```
+Then import and compile classes in src/Cosmian/Cloudproof
+
 
 ### Install with ZPM
 ```
