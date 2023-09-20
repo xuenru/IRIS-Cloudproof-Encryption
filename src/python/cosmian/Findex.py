@@ -6,9 +6,9 @@ from cloudproof_py.findex import Findex
 class FindexSQLite(Findex.FindexUpsert, Findex.FindexSearch):
     """Implement Findex callbacks using SQLite."""
 
-    def __init__(self) -> None:
+    def __init__(self,dbPath) -> None:
         super().__init__()
-        self.conn = sqlite3.connect("findex.sqlite")
+        self.conn = sqlite3.connect(dbPath)
         # Creating index tables required by Findex
         self.conn.execute(
             """CREATE TABLE IF NOT EXISTS entry_table (
