@@ -8,7 +8,7 @@
       <Packaging>module</Packaging>
       <Resource Name="Cosmian.PKG"/>
       <SourcesRoot>src</SourcesRoot>
-      <FileCopy Name="src/python/cosmian/" Target="${mgrdir}python/"/>
+      <FileCopy Name="src/python/cosmian/" Target="${mgrdir}python/cosmian/"/>
     </Module>
   </Document>
 </Export>

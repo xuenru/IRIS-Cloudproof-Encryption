@@ -1,11 +1,17 @@
 # IRIS Cloudproof Encryption
 # This project implements the data Encryption in IRIS by cloudproof_py from [Cosmian](https://docs.cosmian.com/cloudproof_encryption/how_it_works/).
 
-## Instalation
+## Installation
 ```shell
-pip3 install --target /durable/iris/mgr/python cloudproof_py
-cp src/python/cosmian /durable/iris/mgr/python
+pip install -r requirements.txt
+cp src/python/cosmian ${mgrdir}python/cosmian/
 ```
+
+### Install by ZPM
+```
+zpm "install iris-cloudproof-encryption"
+```
+
 ## Application Level Encryption in Interoperability
 Apply the following adapters in the business processes
 - `Cosmian.Cloudproof.CoverCryptAdapter` : encrypt locally
