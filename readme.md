@@ -4,7 +4,7 @@
 ## Installation
 ```shell
 pip install -r requirements.txt
-cp src/python/cosmian ${mgrdir}python/cosmian/
+cp src/python/cosmian/ ${mgrdir}python/cosmian/
 ```
 
 ### Install by ZPM
@@ -49,13 +49,13 @@ d ##class("Cosmian.Cloudproof.Utils").GenerateDecryptionKey(masterPrivateKey, po
 s masterKey = ##class("Cosmian.Cloudproof.Utils").FindexGenerateMasterKey("key path name")
 
 # Get existing findex master key
-s masterKey = ##class("Cosmian.Cloudproof.Utils").FindexGetMasterKey("/durable/NS/DEMO/findex_master.key")
+s masterKey = ##class("Cosmian.Cloudproof.Utils").FindexGetMasterKey("/pathto/findex_master.key")
 
 # Generate findex label for salt
 s label = ##class("Cosmian.Cloudproof.Utils").FindexGenerateLabel("label")
 
 # Get findex interface instance
-s findexInterface = ##class("Cosmian.Cloudproof.Utils").FindexGetInterface("path to db sqlite")
+s findexInterface = ##class("Cosmian.Cloudproof.Utils").FindexGetInterface("path to db sqlite file")
 
 # Update or insert keywords index value in Findex database
 # data example : Set data = {"1": ["Martin", "Shepherd"], "2": ["Martial", "Wilkins"], "3": ["John", "Shepherd"]}.%ToJSON()
